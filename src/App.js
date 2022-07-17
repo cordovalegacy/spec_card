@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Specs from './components/specs';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div id="specs-wrapper">
+      <Specs
+      cpu = {Specs.cpu}
+      gpu = {Specs.gpu}
+      ram = {Specs.ram}
+      ssd = {Specs.ssd}
+      psu = {Specs.psu}
+      motherboard = {Specs.mobo}
+      case = {Specs.tower}
+      cooler = {Specs.cooler}
+      />
+      </div>
     </div>
   );
 }
